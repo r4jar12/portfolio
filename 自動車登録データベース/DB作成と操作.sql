@@ -2,98 +2,98 @@ CREATE DATABASE regist;
 
 USE regist;
 
-CREATE TABLE •\_Ž©“®ŽÔŽí•Ê(
+CREATE TABLE è¡¨_è‡ªå‹•è»Šç¨®åˆ¥(
   CD INT PRIMARY KEY,
-  –¼Ì VARCHAR(10),
-  ÅŠz INT
+  åç§° VARCHAR(10),
+  ç¨Žé¡ INT
 );
 
-INSERT INTO •\_Ž©“®ŽÔŽí•Ê VALUES(1,'•’ÊŽÔ',37000);
-INSERT INTO •\_Ž©“®ŽÔŽí•Ê VALUES(2,'ŒyŽ©“®ŽÔ',15000);
-INSERT INTO •\_Ž©“®ŽÔŽí•Ê VALUES(3,'’†Œ^“ñ—Ö',10000);
+INSERT INTO è¡¨_è‡ªå‹•è»Šç¨®åˆ¥ VALUES(1,'æ™®é€šè»Š',37000);
+INSERT INTO è¡¨_è‡ªå‹•è»Šç¨®åˆ¥ VALUES(2,'è»½è‡ªå‹•è»Š',15000);
+INSERT INTO è¡¨_è‡ªå‹•è»Šç¨®åˆ¥ VALUES(3,'ä¸­åž‹äºŒè¼ª',10000);
 
-SELECT * FROM •\_Ž©“®ŽÔŽí•Ê;
+SELECT * FROM è¡¨_è‡ªå‹•è»Šç¨®åˆ¥;
 
-SELECT * FROM •\_Ž©“®ŽÔŽí•Ê
-  WHERE ÅŠz >= 10000 AND ÅŠz <= 20000
-  ORDER BY ÅŠz DESC;
+SELECT * FROM è¡¨_è‡ªå‹•è»Šç¨®åˆ¥
+  WHERE ç¨Žé¡ >= 10000 AND ç¨Žé¡ <= 20000
+  ORDER BY ç¨Žé¡ DESC;
 
-SELECT * FROM •\_Ž©“®ŽÔŽí•Ê
-  WHERE –¼Ì LIKE '%ŽÔ%';
+SELECT * FROM è¡¨_è‡ªå‹•è»Šç¨®åˆ¥
+  WHERE åç§° LIKE '%è»Š%';
 
-CREATE TABLE •\_¢‘Ñ(
+CREATE TABLE è¡¨_ä¸–å¸¯(
   CD INT PRIMARY KEY,
-  “d˜b VARCHAR(20),
-  ZŠ VARCHAR(50)
+  é›»è©± VARCHAR(20),
+  ä½æ‰€ VARCHAR(50)
 );
 
-INSERT INTO •\_¢‘Ñ(CD,ZŠ) VALUES(1,'ò‹æ```');
-INSERT INTO •\_¢‘Ñ(CD,“d˜b,ZŠ) VALUES(2,'297-3981','Â—t‹æ```');
-INSERT INTO •\_¢‘Ñ(CD,“d˜b,ZŠ) VALUES(3,'221-3478','‹{é–ì‹æ```');
-INSERT INTO •\_¢‘Ñ(CD,ZŠ) VALUES(4,'‘¾”’‹æ```');
-INSERT INTO •\_¢‘Ñ(CD,“d˜b,ZŠ) VALUES(5,'743-1234','Žá—Ñ‹æ```');
+INSERT INTO è¡¨_ä¸–å¸¯(CD,ä½æ‰€) VALUES(1,'æ³‰åŒºï½žï½žï½ž');
+INSERT INTO è¡¨_ä¸–å¸¯(CD,é›»è©±,ä½æ‰€) VALUES(2,'297-3981','é’è‘‰åŒºï½žï½žï½ž');
+INSERT INTO è¡¨_ä¸–å¸¯(CD,é›»è©±,ä½æ‰€) VALUES(3,'221-3478','å®®åŸŽé‡ŽåŒºï½žï½žï½ž');
+INSERT INTO è¡¨_ä¸–å¸¯(CD,ä½æ‰€) VALUES(4,'å¤ªç™½åŒºï½žï½žï½ž');
+INSERT INTO è¡¨_ä¸–å¸¯(CD,é›»è©±,ä½æ‰€) VALUES(5,'743-1234','è‹¥æž—åŒºï½žï½žï½ž');
 
-SELECT * FROM •\_¢‘Ñ;
+SELECT * FROM è¡¨_ä¸–å¸¯;
 
-SELECT * FROM •\_¢‘Ñ WHERE “d˜b IS NULL;
+SELECT * FROM è¡¨_ä¸–å¸¯ WHERE é›»è©± IS NULL;
 
-CREATE TABLE •\_ŒÂl(
+CREATE TABLE è¡¨_å€‹äºº(
   CD INT PRIMARY KEY,
-  Ž–¼ VARCHAR(20),
-  Œg‘Ñ VARCHAR(20),
-  ¢‘ÑCD INT REFERENCES •\_¢‘Ñ(CD)
+  æ°å VARCHAR(20),
+  æºå¸¯ VARCHAR(20),
+  ä¸–å¸¯CD INT REFERENCES è¡¨_ä¸–å¸¯(CD)
 );
 
-INSERT INTO •\_ŒÂl(CD,Ž–¼,Œg‘Ñ,¢‘ÑCD) VALUES(1,'‘Š“c ‘','090-8737-5883',1);
-INSERT INTO •\_ŒÂl(CD,Ž–¼,Œg‘Ñ,¢‘ÑCD) VALUES(2,'ˆÉ“¡ –]','090-3482-3248',2);
-INSERT INTO •\_ŒÂl(CD,Ž–¼,Œg‘Ñ,¢‘ÑCD) VALUES(3,'ˆÉ“¡ ³','090-2341-9311',2);
-INSERT INTO •\_ŒÂl(CD,Ž–¼,¢‘ÑCD) VALUES(4,'‰F•” “O',3);
-INSERT INTO •\_ŒÂl(CD,Ž–¼,Œg‘Ñ,¢‘ÑCD) VALUES(5,']–Ø F','090-1095-1843',4);
-INSERT INTO •\_ŒÂl(CD,Ž–¼,¢‘ÑCD) VALUES(6,'D“c ‹œ',5);
-INSERT INTO •\_ŒÂl(CD,Ž–¼,Œg‘Ñ,¢‘ÑCD) VALUES(7,'‰F•” “O','070-5802-1039',5);
+INSERT INTO è¡¨_å€‹äºº(CD,æ°å,æºå¸¯,ä¸–å¸¯CD) VALUES(1,'ç›¸ç”° è¡','090-8737-5883',1);
+INSERT INTO è¡¨_å€‹äºº(CD,æ°å,æºå¸¯,ä¸–å¸¯CD) VALUES(2,'ä¼Šè—¤ æœ›','090-3482-3248',2);
+INSERT INTO è¡¨_å€‹äºº(CD,æ°å,æºå¸¯,ä¸–å¸¯CD) VALUES(3,'ä¼Šè—¤ æ­£','090-2341-9311',2);
+INSERT INTO è¡¨_å€‹äºº(CD,æ°å,ä¸–å¸¯CD) VALUES(4,'å®‡éƒ¨ å¾¹',3);
+INSERT INTO è¡¨_å€‹äºº(CD,æ°å,æºå¸¯,ä¸–å¸¯CD) VALUES(5,'æ±Ÿæœ¨ å­','090-1095-1843',4);
+INSERT INTO è¡¨_å€‹äºº(CD,æ°å,ä¸–å¸¯CD) VALUES(6,'ç¹”ç”° äº¨',5);
+INSERT INTO è¡¨_å€‹äºº(CD,æ°å,æºå¸¯,ä¸–å¸¯CD) VALUES(7,'å®‡éƒ¨ å¾¹','070-5802-1039',5);
 
-SELECT * FROM •\_ŒÂl;
+SELECT * FROM è¡¨_å€‹äºº;
 
-SELECT •\_¢‘Ñ.CD AS ¢‘ÑCD,“d˜b,ZŠ,•\_ŒÂl.CD AS ŒÂlCD,Ž–¼,Œg‘Ñ
-  FROM •\_¢‘Ñ INNER JOIN •\_ŒÂl
-  ON •\_¢‘Ñ.CD = •\_ŒÂl.¢‘ÑCD
-  ORDER BY •\_¢‘Ñ.CD, •\_ŒÂl.CD;
+SELECT è¡¨_ä¸–å¸¯.CD AS ä¸–å¸¯CD,é›»è©±,ä½æ‰€,è¡¨_å€‹äºº.CD AS å€‹äººCD,æ°å,æºå¸¯
+  FROM è¡¨_ä¸–å¸¯ INNER JOIN è¡¨_å€‹äºº
+  ON è¡¨_ä¸–å¸¯.CD = è¡¨_å€‹äºº.ä¸–å¸¯CD
+  ORDER BY è¡¨_ä¸–å¸¯.CD, è¡¨_å€‹äºº.CD;
 
-CREATE TABLE •\_“o˜^(
+CREATE TABLE è¡¨_ç™»éŒ²(
   CD INT PRIMARY KEY,
-  ŒÂlCD INT REFERENCES •\_ŒÂl(CD),
-  Ží•ÊCD INT REFERENCES •\_Ž©“®ŽÔŽí•Ê(CD)
+  å€‹äººCD INT REFERENCES è¡¨_å€‹äºº(CD),
+  ç¨®åˆ¥CD INT REFERENCES è¡¨_è‡ªå‹•è»Šç¨®åˆ¥(CD)
 );
 
-INSERT INTO •\_“o˜^ VALUES(1,1,1);
-INSERT INTO •\_“o˜^ VALUES(2,2,3);
-INSERT INTO •\_“o˜^ VALUES(3,3,2);
-INSERT INTO •\_“o˜^ VALUES(4,2,1);
-INSERT INTO •\_“o˜^ VALUES(5,4,1);
-INSERT INTO •\_“o˜^ VALUES(6,5,2);
-INSERT INTO •\_“o˜^ VALUES(7,6,3);
-INSERT INTO •\_“o˜^ VALUES(8,7,2);
+INSERT INTO è¡¨_ç™»éŒ² VALUES(1,1,1);
+INSERT INTO è¡¨_ç™»éŒ² VALUES(2,2,3);
+INSERT INTO è¡¨_ç™»éŒ² VALUES(3,3,2);
+INSERT INTO è¡¨_ç™»éŒ² VALUES(4,2,1);
+INSERT INTO è¡¨_ç™»éŒ² VALUES(5,4,1);
+INSERT INTO è¡¨_ç™»éŒ² VALUES(6,5,2);
+INSERT INTO è¡¨_ç™»éŒ² VALUES(7,6,3);
+INSERT INTO è¡¨_ç™»éŒ² VALUES(8,7,2);
 
-SELECT * FROM •\_“o˜^;
+SELECT * FROM è¡¨_ç™»éŒ²;
 
-SELECT •\_“o˜^.CD AS “o˜^”Ô†,•\_¢‘Ñ.CD AS ¢‘Ñ”Ô†,“d˜b,ZŠ,•\_ŒÂl.CD AS ŒÂl”Ô†,Ž–¼,Œg‘Ñ,•\_Ž©“®ŽÔŽí•Ê.CD AS Ží•Ê”Ô†,–¼Ì,ÅŠz
-  FROM •\_“o˜^ INNER JOIN •\_ŒÂl
-       ON •\_“o˜^.ŒÂlCD = •\_ŒÂl.CD
-       INNER JOIN •\_Ž©“®ŽÔŽí•Ê
-       ON •\_“o˜^.Ží•ÊCD = •\_Ž©“®ŽÔŽí•Ê.CD
-       INNER JOIN •\_¢‘Ñ
-       ON •\_ŒÂl.¢‘ÑCD = •\_¢‘Ñ.CD
-  ORDER BY “o˜^”Ô†;
+SELECT è¡¨_ç™»éŒ².CD AS ç™»éŒ²ç•ªå·,è¡¨_ä¸–å¸¯.CD AS ä¸–å¸¯ç•ªå·,é›»è©±,ä½æ‰€,è¡¨_å€‹äºº.CD AS å€‹äººç•ªå·,æ°å,æºå¸¯,è¡¨_è‡ªå‹•è»Šç¨®åˆ¥.CD AS ç¨®åˆ¥ç•ªå·,åç§°,ç¨Žé¡
+  FROM è¡¨_ç™»éŒ² INNER JOIN è¡¨_å€‹äºº
+       ON è¡¨_ç™»éŒ².å€‹äººCD = è¡¨_å€‹äºº.CD
+       INNER JOIN è¡¨_è‡ªå‹•è»Šç¨®åˆ¥
+       ON è¡¨_ç™»éŒ².ç¨®åˆ¥CD = è¡¨_è‡ªå‹•è»Šç¨®åˆ¥.CD
+       INNER JOIN è¡¨_ä¸–å¸¯
+       ON è¡¨_å€‹äºº.ä¸–å¸¯CD = è¡¨_ä¸–å¸¯.CD
+  ORDER BY ç™»éŒ²ç•ªå·;
 
-SELECT Ž–¼ FROM •\_ŒÂl
-  GROUP BY Ž–¼
-  HAVING COUNT(Ž–¼) > 1;
+SELECT æ°å FROM è¡¨_å€‹äºº
+  GROUP BY æ°å
+  HAVING COUNT(æ°å) > 1;
 
-SELECT •\_¢‘Ñ.CD AS ¢‘Ñ”Ô†,“d˜b,ZŠ,COUNT(•\_Ž©“®ŽÔŽí•Ê.CD) AS “o˜^”,SUM(ÅŠz) AS ÅŠz‡Œv
-  FROM •\_“o˜^ INNER JOIN •\_ŒÂl
-       ON •\_“o˜^.ŒÂlCD = •\_ŒÂl.CD
-       INNER JOIN •\_Ž©“®ŽÔŽí•Ê
-       ON •\_“o˜^.Ží•ÊCD = •\_Ž©“®ŽÔŽí•Ê.CD
-       INNER JOIN •\_¢‘Ñ
-       ON •\_ŒÂl.¢‘ÑCD = •\_¢‘Ñ.CD
-  GROUP BY ¢‘Ñ”Ô†;
+SELECT è¡¨_ä¸–å¸¯.CD AS ä¸–å¸¯ç•ªå·,é›»è©±,ä½æ‰€,COUNT(è¡¨_è‡ªå‹•è»Šç¨®åˆ¥.CD) AS ç™»éŒ²æ•°,SUM(ç¨Žé¡) AS ç¨Žé¡åˆè¨ˆ
+  FROM è¡¨_ç™»éŒ² INNER JOIN è¡¨_å€‹äºº
+       ON è¡¨_ç™»éŒ².å€‹äººCD = è¡¨_å€‹äºº.CD
+       INNER JOIN è¡¨_è‡ªå‹•è»Šç¨®åˆ¥
+       ON è¡¨_ç™»éŒ².ç¨®åˆ¥CD = è¡¨_è‡ªå‹•è»Šç¨®åˆ¥.CD
+       INNER JOIN è¡¨_ä¸–å¸¯
+       ON è¡¨_å€‹äºº.ä¸–å¸¯CD = è¡¨_ä¸–å¸¯.CD
+  GROUP BY ä¸–å¸¯ç•ªå·;
